@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		id="yandex-appmetrica-push-plugin-cordova" 
+		version="0.1.0">
+	<name>AppMetricaPush</name>
+	<description>Cordova/PhoneGap plugin for AppMetrica Push SDK</description>
+    <author>Yandex, LLC</author>
+    <license>https://yandex.com/legal/appmetrica_sdk_agreement/</license>
+    <keywords>yandex, appmetrica, metrica, push, android, ios</keywords>
+
+    <dependency id="yandex-appmetrica-plugin-cordova" />
+
+	<js-module name="appmetricapush" src="www/appmetricapush.js">
+		<clobbers target="appMetricaPush" />
+	</js-module>
+	
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="AppMetricaPush">
+				<param name="android-package" value="com.yandex.metrica.push.plugin.cordova.AppMetricaPush" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+		
+		<framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+		
+		<source-file src="src/android/mobmetricapushlib.aar" target-dir="libs" />
+		<source-file src="src/android/appmetrica-push-plugin.aar" target-dir="libs" />
+			
+		<source-file src="src/android/AppMetricaPush.java" target-dir="src/com/yandex/metrica/push/plugin/cordova" />
+	</platform>
+
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="AppMetricaPush">
+				<param name="ios-package" value="AppMetricaPush" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+
+		<header-file src="src/ios/AppMetricaPush.h" />
+		<source-file src="src/ios/AppMetricaPush.m" />
+		<framework src="src/ios/YandexMobileMetricaPush.framework" custom="true" />
+
+		<framework src="UserNotifications.framework" weak="true" />
+	</platform>
+</plugin>

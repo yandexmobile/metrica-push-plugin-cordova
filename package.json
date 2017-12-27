@@ -1,0 +1,36 @@
+{
+  "name": "yandex-appmetrica-push-plugin-cordova",
+  "version": "0.1.0",
+  "description": "Cordova/PhoneGap plugin for AppMetrica Push SDK",
+  "cordova": {
+    "id": "yandex-appmetrica-push-plugin-cordova",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yandexmobile/metrica-push-plugin-cordova.git"
+  },
+  "keywords": [
+    "yandex",
+    "appmetrica",
+    "metrica",
+    "push",
+    "android",
+    "ios",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Yandex, LLC",
+  "license": "ISC",
+  "homepage": "https://tech.yandex.ru/metrica-mobile-sdk",
+  "bugs": {
+    "url": "https://github.com/yandexmobile/metrica-push-plugin-cordova/issues"
+  },
+  "dependencies": {
+    "yandex-appmetrica-plugin-cordova" : ">=0.2.0"
+  }
+}

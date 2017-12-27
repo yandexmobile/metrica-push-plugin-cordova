@@ -1,0 +1,15 @@
+repositories{    
+  jcenter()
+  mavenCentral()
+  flatDir {
+      dirs 'libs'
+   }
+}
+
+dependencies {
+	compile 'com.google.android.gms:play-services-gcm:10.2.1'
+	compile 'com.android.support:support-v4:26.0.2'
+
+   	compile(name:'appmetrica-push-plugin', ext:'aar')
+   	compile(name:'mobmetricapushlib', ext:'aar')
+}
