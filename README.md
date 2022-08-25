@@ -1,4 +1,6 @@
-# AppMetrica Push Cordova Plugin
+# [ATTENTION] AppMetrica Push Cordova Plugin
+
+> Support and development of the plugin has been stopped. We do not guarantee the SDK will work correctly.
 
 ## Documentation
 Common documentation available on [AppMetrica official site][DOCUMENTATION].
